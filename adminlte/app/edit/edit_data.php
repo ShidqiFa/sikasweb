@@ -1,8 +1,14 @@
+<?php
+$id   = $_GET['id'];
+$query= mysqli_query($koneksi,"SELECT * FROM tb_kas WHERE id='$id'");
+$view = mysqli_fetch_array($query);
+?>
 <section class="content">
+
     <div class="container-fluid">   
         <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">General Elements</h3>
+                <h3 class="card-title">Edit Data Kas</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -12,7 +18,7 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>Keterangan</label>
-                        <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                        <input type="text" class="form-control" rows="2" placeholder="Keterangan" value="<?php echo $view['keterangan']; ?>"></input>
                         
                       </div>
                     </div>
@@ -36,8 +42,10 @@
                         <label>Kredit</label>
                         <input type="text" class="form-control" placeholder="Keterangan">
                       </div>
+                  
                     </div>
                   </div>
+                <button class="btn btn-sm btn-info">Simpan</button>  
                 </form>
               </div>
               <!-- /.card-body -->

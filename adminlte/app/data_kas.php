@@ -34,7 +34,7 @@
                     <td ><?php echo $mhs['Kredit'];?></td>
                     <td widht="0.5%">
                       <a onclick="hapus_data(<?php echo $mhs['id'];?>)"  class="btn btn-sm btn-danger">Hapus</a>
-                      <a href="index.php?page=edit-data"  class="btn btn-sm btn-success">Edit</a>
+                      <a href="index.php?page=edit-data&& id=<?php echo $mhs['id'];?>"  class="btn btn-sm btn-success">Edit</a>
                       <a href="" ></b   a>
 
                     </td>
@@ -76,7 +76,7 @@
                   <input type="text" class="form-control" placeholder="Keterangan" name="keterangan"required>
                 </div>
                 <div class="md-form md-outline input-with-post-icon datepicker">
-                  <input placeholder="Tanggal" type="date" id="example" class="form-control">    
+                  <input placeholder="Tanggal" type="date" id="example" value="<?php echo date("Y-M-D")?>"class="form-control">    
                 </div>
                     
                 <div class="col">
